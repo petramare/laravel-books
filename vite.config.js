@@ -10,6 +10,7 @@ export default ({ mode }) => {
 
             laravel({
                 input: [
+                    'resources/css/admin.scss',
                     'resources/css/app.scss',
                     'resources/js/app.js',
                     'resources/js/partners.jsx'

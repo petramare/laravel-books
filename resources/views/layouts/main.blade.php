@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Laravel Books Project</title>
 
+    {{--
+        load the result of the entry file resources/css/app.scss
+        in a <link rel="stylesheet" ...> tag
+    --}}
     @vite('resources/css/app.scss')
 
 </head>
@@ -15,8 +19,17 @@
         'current_menu_item' => $current_menu_item
     ])
 
+    {{--
+        display whatever has been put to section
+        content before
+    --}}
     @yield('content')
 
+
+    {{--
+        load the result of the entry file resources/js/app.js
+        in a <script src="..."> tag
+    --}}
     @vite('resources/js/app.js')
 
 </body>
