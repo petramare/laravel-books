@@ -11,4 +11,9 @@
         You will keep coming back for more.
     </p>
 
+    <div id="partners"></div>
+
+    @viteReactRefresh
+    @vite('resources/js/partners.jsx')
+
 @endsection
