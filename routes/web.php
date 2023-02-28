@@ -1,9 +1,11 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\Api\BookController;
 use App\Http\Controllers\Api\TestController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\ReviewController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,3 +27,12 @@ Route::get('/api/test/model', [TestController::class, 'modelResponse']);
 Route::get('/api/test/collection', [TestController::class, 'collectionResponse']);
 
 Route::get('/home', [HomeController::class, 'home'])->middleware('auth')->name('home');
+
+Route::get('/book/{book_id}', [BookController::class, 'show'])->name('books.show');
+
+// auth-protected routes
+Route::middleware(['auth'])->group(function() {
+
+    Route::post('/book/{book_id}/review', [ReviewController::class, 'reviewBook'])->name('books.review');
+
+});

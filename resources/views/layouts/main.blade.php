@@ -19,14 +19,17 @@
         'current_menu_item' => $current_menu_item ?? null
     ])
 
-    @include('common.alerts')
+    <div class="main-content">
 
-    {{--
-        display whatever has been put to section
-        content before
-    --}}
-    @yield('content')
+        @include('common.alerts')
 
+        {{--
+            display whatever has been put to section
+            content before
+        --}}
+        @yield('content')
+
+    </div>
 
     {{--
         load the result of the entry file resources/js/app.js

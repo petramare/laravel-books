@@ -1,5 +1,12 @@
 // styling for the homepage
 
+.crime-books {
+    &__book {
+        text-decoration: none;
+        background-color: #f0f0f0;
+    }
+}
+
 .latest-books {
     display: flex;
     flex-flow: row wrap;
