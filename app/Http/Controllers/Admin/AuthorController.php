@@ -21,7 +21,6 @@ class AuthorController extends Controller
         ));
     }
 
-
     /**
      * displays a form to create a new author
      */
@@ -55,7 +54,7 @@ class AuthorController extends Controller
     }
 
     /**
-     * displays a form to create a new author
+     * displays a form to edit an existing author
      */
     public function edit($author_id)
     {
@@ -67,7 +66,7 @@ class AuthorController extends Controller
     }
 
     /**
-     * updates a new author
+     * updates an existing author
      */
     public function update(Request $request, $author_id)
     {
