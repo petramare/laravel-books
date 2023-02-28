@@ -13,6 +13,7 @@ export default ({ mode }) => {
                     'resources/css/admin.scss',
                     'resources/css/app.scss',
                     'resources/js/app.js',
+                    'resources/js/latest-books.js',
                     'resources/js/partners.jsx'
                 ],
                 refresh: true,

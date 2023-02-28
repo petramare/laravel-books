@@ -8,4 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Book extends Model
 {
     use HasFactory;
+
+    /**
+     * 'authors' == name of the relationship
+     */
+    public function authors()
+    {
+        return $this->belongsToMany(Author::class);
+    }
+
+    public function publishers()
+    {
+        return $this->belongsToMany(Publisher::class);
+    }
 }

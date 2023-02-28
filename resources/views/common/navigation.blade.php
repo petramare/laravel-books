@@ -13,4 +13,22 @@
             About
         @endif
     </a>
+
+    @guest
+        <a href="{{ route('login') }}">Log in</a>
+        <a href="{{ route('register') }}">Register</a>
+    @endguest
+
+    @auth
+
+        Logged in as {{ auth()->user()->name }} &nbsp;
+
+        <form action="{{ route('logout') }}" method="post">
+
+            @csrf
+
+            <button>Logout</button>
+
+        </form>
+    @endauth
 </nav>

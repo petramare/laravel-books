@@ -16,8 +16,10 @@
 <body>
 
     @include('common.navigation', [
-        'current_menu_item' => $current_menu_item
+        'current_menu_item' => $current_menu_item ?? null
     ])
+
+    @include('common.alerts')
 
     {{--
         display whatever has been put to section
