@@ -12,6 +12,17 @@
         About
     </a>
 
+    @can('admin')
+
+        <a
+            href="{{ route('admin.books') }}"
+            class="top-menu__item"
+        >
+            Books administration
+        </a>
+
+    @endcan
+
     @guest
         <a
             href="{{ route('login') }}"
